@@ -1,0 +1,3 @@
+rootProject.name = 'hocreact2'
+
+include ':app'
