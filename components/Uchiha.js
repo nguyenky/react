@@ -2,7 +2,8 @@ import React,{Component} from "react";
 import PropTypes from 'prop-types';
 import{
   View,
-  Text
+  Text,
+  TouchableOpacity
 } from "react-native";
 export default class Uchiha extends Component{
   render(){
@@ -11,6 +12,7 @@ export default class Uchiha extends Component{
         <Text>
           {this.props.hoten} - {this.props.namsinh}
         </Text>
+        
       </View>
     );
   }

@@ -13,18 +13,12 @@ import {
   TouchableOpacity
 } from 'react-native';
 import Uchiha from "./components/Uchiha.js";
+import Clock from "./components/Clock.js";
 export default class App extends Component {
   render() {
     return (
       <View>
-        <Text>ádsa</Text>
-        <Uchiha hoten="Uchiha" namsinh="1993"></Uchiha>
-        <DemoComponent1 hoten="Lengyeky"></DemoComponent1>
-        <DemoComponent1 hoten="Uchiha"></DemoComponent1>
-        <TouchableOpacity onPress={()=>{this.clickMe()}}>
-          <View style={{backgroundColor:'green',width:100,height:20}}>
-          </View>
-        </TouchableOpacity>
+        <Clock></Clock>
       </View>
     );
   }
