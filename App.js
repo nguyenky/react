@@ -9,7 +9,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
 import Uchiha from "./components/Uchiha.js";
 export default class App extends Component {
@@ -17,8 +18,30 @@ export default class App extends Component {
     return (
       <View>
         <Text>ádsa</Text>
-        <Uchiha></Uchiha>
+        <Uchiha hoten="Uchiha" namsinh="1993"></Uchiha>
+        <DemoComponent1 hoten="Lengyeky"></DemoComponent1>
+        <DemoComponent1 hoten="Uchiha"></DemoComponent1>
+        <TouchableOpacity onPress={()=>{this.clickMe()}}>
+          <View style={{backgroundColor:'green',width:100,height:20}}>
+          </View>
+        </TouchableOpacity>
       </View>
+    );
+  }
+  clickMe(){
+    alert('welcome');
+  }
+}
+
+class DemoComponent1 extends Component {
+  render(){
+    return(
+      <View>
+        <Text>
+          {this.props.hoten} || 'default name'
+        </Text>
+      </View>
+
     );
   }
 }

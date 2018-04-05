@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import PropTypes from 'prop-types';
 import{
   View,
   Text
@@ -8,9 +9,13 @@ export default class Uchiha extends Component{
     return(
       <View>
         <Text>
-          Component Uchiha
+          {this.props.hoten} - {this.props.namsinh}
         </Text>
       </View>
     );
   }
 }
+Uchiha.propTypes = {
+  hoten: PropTypes.string,
+  namsinh: PropTypes.string,
+};
