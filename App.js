@@ -12,21 +12,31 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
+
+import {
+  StackNavigator,
+} from 'react-navigation';
+
+
 import Uchiha from "./components/Uchiha.js";
 import Clock from "./components/Clock.js";
-export default class App extends Component {
-  render() {
-    return (
-      <View>
-        <Clock></Clock>
-      </View>
-    );
-  }
-  clickMe(){
-    alert('welcome');
-  }
-}
-
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <View>
+//         <Clock></Clock>
+//       </View>
+//     );
+//   }
+//   clickMe(){
+//     alert('welcome');
+//   }
+// }
+const Navigation = StackNavigator({
+  Uchiha:{screen:Uchiha},
+  Clock:{screen:Clock},
+});
+export default Navigation;
 class DemoComponent1 extends Component {
   render(){
     return(
