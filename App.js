@@ -33,9 +33,14 @@ import Clock from "./components/Clock.js";
 //   }
 // }
 const Navigation = StackNavigator({
-  Uchiha:{screen:Uchiha},
   Clock:{screen:Clock},
-});
+  Uchiha:{screen:Uchiha},
+  },{
+    initialRouteName: 'Clock',
+    headerMode: 'screen'
+  }
+  // navigationOptions:{ header:{ visible:false }}
+);
 export default Navigation;
 class DemoComponent1 extends Component {
   render(){

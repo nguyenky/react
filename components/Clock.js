@@ -8,15 +8,20 @@ import{
 const util = require('util');
 export default class Clock extends Component {
   static navigationOptions = {
-    title: 'Welcome clock',
+    header: null,
+    title: 'Welcome',
+
   };
   render(){
     var {navigate} = this.props.navigation;
     return(
-      <View>
+      <View style={{backgroundColor:'red',flex:1}}>
         <Text>uchiha clock here</Text>
         <Button
-          onPress={()=>navigate("Uchiha")}
+          onPress={()=>navigate("Uchiha",{
+            ho:'Le',
+            name:'nguyen ky',
+          })}
           title = "Go to the Uchiha screen !!!"
         />
       </View>
